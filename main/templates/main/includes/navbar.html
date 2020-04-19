@@ -1,0 +1,20 @@
+<div class="navbar-fixed">
+   <nav>
+    <div class="nav-wrapper  grey darken-4">
+      <a href="/" class="brand-logo">DevNgecu</a><a href="" class="typewrite" data-period="2000" data-type='[ " Python"," JavaScript"]'>
+        <span class="wrap"></span>
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="/account">{{user.username}}</a></li>
+          <li><a href="/logout">Logout</a></li>
+        {% else %}
+        <li><a href="/register">Register</a></li>
+          <li><a href="/login">Login</a></li>
+        {% endif %}
+
+      </ul>
+    </div>
+  </nav>
+  </div>
